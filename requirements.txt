@@ -1,0 +1,4 @@
+qiskit>=0.12.1
+matplotlib>=3
+tqdm
+numpy
