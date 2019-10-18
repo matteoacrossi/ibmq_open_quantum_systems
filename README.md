@@ -34,6 +34,6 @@ Each folder contains a Jupyter notebook with a different open quantum system mod
 The notebooks can also be used interactively on Binder [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/matteoacrossi/ibmq_open_quantum_systems/master)
 
 ## Authors and citation
-If you find this code useful, please find the paper
+If you find this code useful, please cite the paper
 
 Guillermo García-Peréz, Matteo A. C. Rossi, Sabrina Maniscalco, [arXiv:1906.07099](https://arxiv.org/abs/1906.07099).
