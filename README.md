@@ -26,7 +26,7 @@ To run the experiments on the real device, an IBM Q Experience account is needed
 Each folder contains a Jupyter notebook with a different open quantum system model. 
 
 * Reservoir engineering reproduces Fig. 1
-* [Collisional model](https://nbviewer.jupyter.org/github/matteoacrossi/ibmq_open_quantum_systems/blob/master/collisional_model/collisional_model.ipynb)) reproduces Fig. 2
+* [Collisional model](https://nbviewer.jupyter.org/github/matteoacrossi/ibmq_open_quantum_systems/blob/master/collisional_model/collisional_model.ipynb) reproduces Fig. 2
 * Amplitude damping reproduces Fig. 3 and Fig. 5a
 * [Depolarizing channel](https://nbviewer.jupyter.org/github/matteoacrossi/ibmq_open_quantum_systems/blob/master/depolarizing_channel/depolarizing_channel.ipynb) reproduces Fig. 4
 * [Extractable work with a Pauli channel](https://nbviewer.jupyter.org/github/matteoacrossi/ibmq_open_quantum_systems/blob/master/pauli_channel/pauli_channel_work_extraction.ipynb) reproduces Fig. 5b
