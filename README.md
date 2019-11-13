@@ -7,11 +7,6 @@ A repository with the code used for producing the results of the paper Guillermo
 The code is written using [Qiskit](https://github.com/qiskit/qiskit/), and the experiments are run using the free IBM Q Experience.
 
 ## Installation and usage
-Install the dependencies with
-
-```
-pip install -r requirements.txt
-```
 
 Clone the repository with
 
@@ -19,7 +14,13 @@ Clone the repository with
 git clone https://github.com/matteoacrossi/ibmq_open_quantum_systems.git
 ```
 
-The code was tested with Python 3.7.
+Install the dependencies with
+
+```
+pip install -r requirements.txt
+```
+
+The code was tested with Python 3.7 and qiskit 0.12.
 
 To run the experiments on the real device, an IBM Q Experience account is needed. Please refer to these [instructions](https://github.com/Qiskit/qiskit-iqx-tutorials/blob/master/INSTALL.md).
 
