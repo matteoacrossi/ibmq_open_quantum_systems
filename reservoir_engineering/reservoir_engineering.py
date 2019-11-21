@@ -6,7 +6,7 @@ from qiskit import QuantumCircuit
 import numpy as np
 
 def initial_conditions(q, system):
-    """Returns a QuantumCircuit implementing ZZ pump channel on the system qubits
+    """Returns a dictionary containing four QuantumCircuit objects which prepare the two-qubit system in different initial states
     
     Args:
         q (QuantumRegister): the register to use for the circuit
@@ -32,15 +32,15 @@ def initial_conditions(q, system):
     ic['11'].x(q[system[0]])
     ic['11'].x(q[system[1]])
     
-    return ic
+    return ic, state_labels
 
 def zz_pump(q, c, p, system, ancilla):
-    """Returns a QuantumCircuit implementing ZZ pump channel on the system qubits
+    """Returns a QuantumCircuit implementing the ZZ pump channel on the system qubits
     
     Args:
         q (QuantumRegister): the register to use for the circuit
         c (ClassicalRegister): the register to use for the measurement of the system qubits
-        p (float): the efficiency for the channel between 0 and 1
+        p (float): the efficiency for the channel, between 0 and 1
         system (list): list of indices for the system qubits
         ancilla (int): index for the ancillary qubit
     
@@ -70,12 +70,12 @@ def zz_pump(q, c, p, system, ancilla):
     return zz
 
 def xx_pump(q, c, p, system, ancilla):
-    """Returns a QuantumCircuit implementing XX pump channel on the system qubits
+    """Returns a QuantumCircuit implementing the XX pump channel on the system qubits
     
     Args:
         q (QuantumRegister): the register to use for the circuit
         c (ClassicalRegister): the register to use for the measurement of the system qubits
-        p (float): the efficiency for the channel between 0 and 1
+        p (float): the efficiency for the channel, between 0 and 1
         system (list): list of indices for the system qubits
         ancilla (int): index for the ancillary qubit
     
@@ -105,12 +105,12 @@ def xx_pump(q, c, p, system, ancilla):
     return xx
 
 def zz_xx_pump(q, c, p, system, ancillae):
-    """Returns a QuantumCircuit implementing ZZ pump channel on the system qubits
+    """Returns a QuantumCircuit implementing the composition channel on the system qubits
     
     Args:
         q (QuantumRegister): the register to use for the circuit
         c (ClassicalRegister): the register to use for the measurement of the system qubits
-        p (float): the efficiency for the channel between 0 and 1
+        p (float): the efficiency for both channels, between 0 and 1
         system (list): list of indices for the system qubits
         ancillae (list): list of indices for the ancillary qubits
     
@@ -121,28 +121,28 @@ def zz_xx_pump(q, c, p, system, ancillae):
     
     theta = 2 * np.arcsin(np.sqrt(p))
     
-    ## ZZ pump
-    # Map information to ancilla
+    # ZZ pump
+    ## Map information to ancilla
     zx.cx(q[system[0]], q[system[1]])
     zx.x(q[ancillae[0]])
     zx.cx(q[system[1]], q[ancillae[0]])
     
-    # Conditional rotation
+    ## Conditional rotation
     zx.cu3(theta, 0.0, 0.0, q[ancillae[0]], q[system[1]])
     
-    # Inverse mapping
+    ## Inverse mapping
     zx.cx(q[system[1]], q[ancillae[0]])
     
-    ## XX pump
-    # Map information to ancilla
+    # XX pump
+    ## Map information to ancilla
     zx.h(q[system[0]])
     zx.x(q[ancillae[1]])
     zx.cx(q[system[0]], q[ancillae[1]])
     
-    # Conditional rotation
+    ## Conditional rotation
     zx.cu3(theta, 0.0, 0.0, q[ancillae[1]], q[system[0]])
     
-    # Inverse mapper
+    ## Inverse mapping
     zx.cx(q[system[0]], q[ancillae[1]])
     
     # Measurement
