@@ -2,7 +2,7 @@
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/matteoacrossi/ibmq_open_quantum_systems/master)
 
-A repository with the code used for producing the results of the paper Guillermo García-Peréz, Matteo A. C. Rossi, Sabrina Maniscalco, [arXiv:1906.07099](https://arxiv.org/abs/1906.07099).
+A repository with the code used for producing the results of the paper *Guillermo García-Peréz, Matteo A. C. Rossi, Sabrina Maniscalco, [npj Quantum Inf 6, 1 (2020)](https://doi.org/10.1038/s41534-019-0235-y)*.
 
 The code is written using [Qiskit](https://github.com/qiskit/qiskit/), and the experiments are run using the free IBM Q Experience.
 
@@ -36,6 +36,21 @@ Each folder contains a Jupyter notebook with a different open quantum system mod
 The notebooks can also be used interactively on Binder [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/matteoacrossi/ibmq_open_quantum_systems/master)
 
 ## Authors and citation
-If you find this code useful, please cite the paper
+If you find this code useful, please consider citing the paper
 
-Guillermo García-Peréz, Matteo A. C. Rossi, Sabrina Maniscalco, [arXiv:1906.07099](https://arxiv.org/abs/1906.07099).
+*Guillermo García-Peréz, Matteo A. C. Rossi, Sabrina Maniscalco, [npj Quantum Inf 6, 1 (2020)](https://doi.org/10.1038/s41534-019-0235-y).*
+
+BibTeX record:
+
+```
+@article{Garcia-Perez2019,
+author = {Garc{\'{i}}a-P{\'{e}}rez, Guillermo and Rossi, Matteo A. C. and Maniscalco, Sabrina},
+doi = {10.1038/s41534-019-0235-y},
+issn = {2056-6387},
+journal = {npj Quantum Inf.},
+pages = {1},
+publisher = {Springer US},
+title = {{IBM Q Experience as a versatile experimental testbed for simulating open quantum systems}},
+year = {2019}
+}
+```
