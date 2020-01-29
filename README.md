@@ -49,8 +49,9 @@ doi = {10.1038/s41534-019-0235-y},
 issn = {2056-6387},
 journal = {npj Quantum Inf.},
 pages = {1},
+volume = {6},
 publisher = {Springer US},
 title = {{IBM Q Experience as a versatile experimental testbed for simulating open quantum systems}},
-year = {2019}
+year = {2020}
 }
 ```
